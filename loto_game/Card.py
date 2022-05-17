@@ -15,7 +15,7 @@ def random_array(low, high, size):
 
 class Card:
 
-    def set_nums(self):
+    def __set_nums(self):
         random_integer_array = random_array(1, 90, 15)
         # print(random_integer_array)
         l1 = random_integer_array[0:5]
@@ -79,7 +79,7 @@ class Card:
 
     def __init__(self):
         self.__lines = []
-        self.set_nums()
+        self.__set_nums()
         self.__header = '-------------------------------'
 
 

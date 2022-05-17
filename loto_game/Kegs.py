@@ -3,7 +3,7 @@ import random
 
 class Kegs:
 
-    def kreate_kegs(self):
+    def __kreate_kegs(self):
         for i in range(1, 91):
             keg = Keg()
             keg.set_num(i)
@@ -28,12 +28,11 @@ class Kegs:
         # print (type (self.__kegs))
         self.__i = 0
         # print(f'i={self.__i}')
-        self.kreate_kegs()
+        self.__kreate_kegs()
 
 if __name__ == '__main__':
     k = Kegs()
     # print(f'k.get_current()={k.get_current()}')
-    # k.kreate_kegs()
     kegs = k.get_kegs()
     print(type(kegs), f' len(kegs)={len(kegs)} kegs={kegs}')
     keg = kegs[0]
