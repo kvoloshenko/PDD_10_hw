@@ -119,11 +119,11 @@ class Card_line:
 
 
 
-if __name__ == '__main__':
-    crd = Card()
-    crd.set_header('------ Ваша карточка ----------')
-    crd.print_card()
-    rez = crd.cross_out(1)
-    if rez: crd.print_card()
-    rez = crd.cross_out(21)
-    if rez: crd.print_card()
+# if __name__ == '__main__':
+#     crd = Card()
+#     crd.set_header('------ Ваша карточка ----------')
+#     crd.print_card()
+#     rez = crd.cross_out(1)
+#     if rez: crd.print_card()
+#     rez = crd.cross_out(21)
+#     if rez: crd.print_card()

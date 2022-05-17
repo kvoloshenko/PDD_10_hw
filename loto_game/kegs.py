@@ -30,14 +30,14 @@ class Kegs:
         # print(f'i={self.__i}')
         self.__kreate_kegs()
 
-if __name__ == '__main__':
-    k = Kegs()
-    # print(f'k.get_current()={k.get_current()}')
-    kegs = k.get_kegs()
-    print(type(kegs), f' len(kegs)={len(kegs)} kegs={kegs}')
-    keg = kegs[0]
-    print(type(keg), keg.get_num())
-    for kk in kegs:
-        print(f'keg_num={kk.get_num()}')
-    print(f'get_next={k.get_next().get_num()} curent={k.get_current()}')
-    print(f'get_next={k.get_next().get_num()} curent={k.get_current()}')
+# if __name__ == '__main__':
+#     k = Kegs()
+#     # print(f'k.get_current()={k.get_current()}')
+#     kegs = k.get_kegs()
+#     print(type(kegs), f' len(kegs)={len(kegs)} kegs={kegs}')
+#     keg = kegs[0]
+#     print(type(keg), keg.get_num())
+#     for kk in kegs:
+#         print(f'keg_num={kk.get_num()}')
+#     print(f'get_next={k.get_next().get_num()} curent={k.get_current()}')
+#     print(f'get_next={k.get_next().get_num()} curent={k.get_current()}')

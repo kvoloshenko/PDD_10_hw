@@ -4,11 +4,17 @@ from loto_game.card import Card
 
 class TestPlayer:
 
-    def test_card(self):
+    def test_get_card(self):
         p = Player()
         c = p.get_card()
         crd = Card()
         assert type(c) == type(crd)
+
+    def test_set_card(self):
+        p = Player()
+        c = Card()
+        p.set_card(c)
+        assert p.get_card() == c
 
     def test_default_type(self):
         p = Player()
