@@ -1,13 +1,13 @@
 
 class Keg:
     def __init__(self):
-        self.num = 0
+        self.__num = 0
 
     def set_num(self, num):
-        self.num = num
+        self.__num = num
 
     def get_num(self):
-        return self.num
+        return self.__num
 
 if __name__ == '__main__':
     keg_1 = Keg()

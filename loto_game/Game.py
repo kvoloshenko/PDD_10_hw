@@ -84,7 +84,7 @@ class Game:
 
     def run(self):
         k = Kegs()
-        k.kreate_kegs()
+        # k.kreate_kegs()
         current = 0
         game_over = False
         winner = None

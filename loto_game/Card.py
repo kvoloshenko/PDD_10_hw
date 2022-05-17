@@ -29,26 +29,26 @@ class Card:
         # print(l1, l2, l3)
         cl1 = Card_line()
         cl1.set_nums(l1)
-        self.lines.append(cl1)
+        self.__lines.append(cl1)
         # n1 = cl1.get_nums()
         # print(type(n1), f'n1={n1}')
         cl2 = Card_line()
         cl2.set_nums(l2)
-        self.lines.append(cl2)
+        self.__lines.append(cl2)
         # n2 = cl2.get_nums()
         # print(type(n2), f'n2={n2}')
         cl3 = Card_line()
         cl3.set_nums(l3)
-        self.lines.append(cl3)
+        self.__lines.append(cl3)
         # n3 = cl3.get_nums()
         # print(type(n3), f'n3={n3}')
 
     def set_header(self, header):
-        self.header = header
+        self.__header = header
 
     def print_card(self):
-        print(self.header)
-        for card_line in self.lines:
+        print(self.__header)
+        for card_line in self.__lines:
             nums = card_line.get_nums()
             # print(nums)
             s = ''
@@ -62,7 +62,7 @@ class Card:
 
     def cross_out (self, num):
         rez = False
-        for card_line in self.lines:
+        for card_line in self.__lines:
             index = card_line.cross_out(num)
             if index != -1:
                 rez = True
@@ -72,23 +72,22 @@ class Card:
 
     def is_crossed(self):
         rezault = 0
-        for card_line in self.lines:
+        for card_line in self.__lines:
             if card_line.is_crossed(): rezault +=1
         if rezault == 3: return True
         else: return  False
 
     def __init__(self):
-        self.lines = []
+        self.__lines = []
         self.set_nums()
-        self.header = '-------------------------------'
+        self.__header = '-------------------------------'
 
 
 class Card_line:
-    n = []
 
     def set_nums(self, nums):
-        self.n = [0] * 9
-        # print(type(self.n), self.n)
+        self.__nums = [0] * 9
+        # print(type(self.__nums), self.__nums)
         pos = random_array(0, 8, 5)
         pos.sort()
         # print(F'pos={pos}')
@@ -96,26 +95,26 @@ class Card_line:
         for i in nums:
             y = pos[j]
             # print(i, 'j=', j, ' pos[j]=', pos[j], ' y=',y)
-            self.n[y] = i
-            # print(f'n[y]={self.n[y]}')
+            self.__nums[y] = i
+            # print(f'n[y]={self.__nums[y]}')
             j += 1
-        # print(f'n={self.n}')
+        # print(f'n={self.__nums}')
 
     def get_nums(self):
-        return self.n
+        return self.__nums
 
     def cross_out (self, num):
         index = -1
-        # print(f'count={self.n.count(num)}')
-        if self.n.count(num):
-            # print(f'  index={self.n.index(num)}')
-            index = self.n.index(num)
-            self.n[index] = -1
-            # print(f'   self.n[{index}]={self.n[index]}')
+        # print(f'count={self.__nums.count(num)}')
+        if self.__nums.count(num):
+            # print(f'  index={self.__nums.index(num)}')
+            index = self.__nums.index(num)
+            self.__nums[index] = -1
+            # print(f'   self.__nums[{index}]={self.__nums[index]}')
         return index
 
     def is_crossed(self):
-        if self.n.count(-1) == 5 : return True
+        if self.__nums.count(-1) == 5 : return True
         else: return False
 
 

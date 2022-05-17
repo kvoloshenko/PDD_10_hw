@@ -1,43 +1,39 @@
 from loto_game.Keg import Keg
 import random
 
-
-# keg_1 = Keg()
-# print(f'keg_1.get_num()={keg_1.get_num()}')
-# keg_1.set_num(99)
-# print(f'keg_1.get_num()={keg_1.get_num()}')
-
 class Kegs:
-    kegs = []
-    i = 0
-
-    def __int__(self):
-        pass
 
     def kreate_kegs(self):
         for i in range(1, 91):
             keg = Keg()
             keg.set_num(i)
             # print(f'keg.get_num()={keg.get_num()}')
-            self.kegs.append(keg)
-        random.shuffle(self.kegs)
+            self.__kegs.append(keg)
+        random.shuffle(self.__kegs)
 
     def get_kegs(self):
-        return self.kegs
+        return self.__kegs
 
     def get_next(self):
-        # print(f' i before get_nex={self.i}')
-        k = self.kegs[self.i]
-        self.i += 1
+        # print(f' i before get_nex={self.__i}')
+        k = self.__kegs[self.__i]
+        self.__i += 1
         return k
 
     def get_current(self):
-        return self.i
+        return self.__i
 
+    def __init__(self):
+        self.__kegs = []
+        # print (type (self.__kegs))
+        self.__i = 0
+        # print(f'i={self.__i}')
+        self.kreate_kegs()
 
 if __name__ == '__main__':
     k = Kegs()
-    k.kreate_kegs()
+    # print(f'k.get_current()={k.get_current()}')
+    # k.kreate_kegs()
     kegs = k.get_kegs()
     print(type(kegs), f' len(kegs)={len(kegs)} kegs={kegs}')
     keg = kegs[0]

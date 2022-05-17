@@ -3,10 +3,10 @@ from loto_game.Card import Card
 class Player:
 
     def set_card(self, card):
-        self.card = card
+        self.__card = card
 
     def get_card(self):
-        return self.card
+        return self.__card
 
     def set_name(self, name):
         self.name = name
@@ -15,10 +15,10 @@ class Player:
         return self.name
 
     def set_type(self, type):
-        self.type = type
+        self.__type = type
 
     def get_type(self):
-        return self.type
+        return self.__type
 
     def __init__(self):
         self.set_type('Human')
