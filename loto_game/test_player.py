@@ -1,11 +1,14 @@
 from loto_game.player import Player
+from loto_game.card import Card
+
 
 class TestPlayer:
 
     def test_card(self):
         p = Player()
         c = p.get_card()
-        assert str(type(c)) == "<class 'loto_game.Card.Card'>"
+        crd = Card()
+        assert type(c) == type(crd)
 
     def test_default_type(self):
         p = Player()

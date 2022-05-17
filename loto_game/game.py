@@ -1,5 +1,3 @@
-# from Card import Card
-# from Keg import Keg
 from loto_game.kegs import Kegs
 from loto_game.player import Player
 
