@@ -1,4 +1,4 @@
-from loto_game.Game import Game
+from loto_game.game import Game
 
 game = Game()
 game.run()

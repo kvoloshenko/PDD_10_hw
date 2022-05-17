@@ -1,4 +1,4 @@
-from loto_game.Keg import Keg
+from loto_game.keg import Keg
 import random
 
 class Kegs:

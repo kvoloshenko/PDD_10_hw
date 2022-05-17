@@ -1,4 +1,4 @@
-from loto_game.Card import Card
+from loto_game.card import Card
 
 class Player:
 
